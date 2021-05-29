@@ -1,0 +1,23 @@
+body {
+    display: grid;
+    grid: repeat(3, max-content)/15em auto 20em;
+    background-color: green;
+}
+
+header,
+footer {
+    grid-column: 1 / 4;
+    background-color: red;
+}
+
+.col1 {
+    background-color: purple;
+}
+
+.col2 {
+    background-color: teal;
+}
+
+.col3 {
+    background-color: orange;
+}

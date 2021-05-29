@@ -1,0 +1,72 @@
+html,
+body {
+    height: 100%;
+}
+
+
+/* img {
+    max-width: 100%;
+} */
+
+#div1 {
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 60%) 1fr;
+    /* grid-template-columns: 1fr minmax(min-content, 50%) 1fr; */
+    /* grid-template-columns: 1fr fit-content(20em) 1fr; */
+    /* grid-template-columns: 25% auto 25%; */
+    grid-template-rows: min-content auto min-content;
+}
+
+
+/* header {
+    position: fixed;
+    top: 0;
+} */
+
+header,
+footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#div2 {
+    display: grid;
+    /* this: */
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 10em);
+    /* is the same as this: */
+    grid: repeat(2, 10em) / repeat(7, 1fr);
+    /* change the direction that new grids will be created */
+    /* seems very useful for a card-based blog */
+    grid: 10em 10em / auto-flow 10em;
+    grid: auto-flow 10em / 10em 10em 10em;
+    /* which direction new implicit grids will be created */
+    /* grid-auto-flow: column; */
+    /* grid: 10em 10em /10em 10em 10em; */
+    grid-column-gap: 1em;
+    grid-row-gap: 2em;
+    grid-gap: 1em 2em
+}
+
+#div3 {
+    display: grid;
+    grid: repeat(4, 1fr) / repeat(3, 1fr);
+    gap: 1em;
+    margin: 1em;
+}
+
+#div3 header,
+#div3 footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#div3 main {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#div3 aside {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}

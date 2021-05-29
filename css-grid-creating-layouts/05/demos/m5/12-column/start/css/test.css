@@ -1,0 +1,14 @@
+* {
+    background-color: blue;
+    border: 1px;
+    border-color: black;
+}
+
+body {
+    display: grid;
+    grid: auto-flow 5em/ repeat(6, 1fr);
+}
+
+#span2 {
+    grid-column: span 2;
+}
